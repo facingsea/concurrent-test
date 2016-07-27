@@ -10,6 +10,8 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 /**
+ * 从Java 1.5开始，就提供了Callable和Future，通过它们可以在任务执行完毕之后得到任务执行结果。
+ * 
  * 测试Callable和Futrue
  * @author wangzhf
  *
@@ -22,6 +24,12 @@ public class CallableAndFutureTest {
 
 			@Override
 			public String call() throws Exception {
+				long start = System.currentTimeMillis();
+				System.out.println(start);
+				Thread.sleep(2000);
+				long end = System.currentTimeMillis();
+				System.out.println(end);
+				System.out.println(end - start);
 				System.out.println(Thread.currentThread().getName() + " is worked....");
 				return "Hello";
 			}

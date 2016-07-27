@@ -1,6 +1,5 @@
 package code.main.thread;
 
-import com.sun.swing.internal.plaf.synth.resources.synth;
 
 /**
  * 多个线程共享数据
